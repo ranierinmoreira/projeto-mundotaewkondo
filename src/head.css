@@ -1,0 +1,39 @@
+<head>
+    <h1>Bem-vindo ao Mundo Taekwondo!</h1>
+      <nav>
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Aulas</a>
+        <a href="#">Contato</a>
+      </nav>
+</head>
+
+<style>
+.head {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 24px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.head h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.head nav a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 18px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.head nav a:hover {
+  color: #fff;
+}
+</style>
+
