@@ -4,32 +4,224 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mundo Taekwondo</title>
+    <title>Mundo Taekwondo - Portal Oficial da Arte Marcial Coreana</title>
+    <meta name="description" content="Portal completo sobre Taekwondo: história, técnicas, graduações, eventos e muito mais. Descubra o mundo da arte marcial coreana." />
     <link rel="stylesheet" href="body.css" />
+    <link rel="stylesheet" href="src/head.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-      
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <h1>🥋 Mundo Taekwondo</h1>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#graduacoes">Graduações</a></li>
+            <li><a href="#tecnicas">Técnicas</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
+
     <main>
-      <section>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <!-- Vídeo de fundo -->
+        <video class="hero-video" autoplay muted loop playsinline>
+          <!-- Substitua pelo seu próprio vídeo de Taekwondo -->
+          <source src="/videos/taekwondo-hero.mp4" type="video/mp4">
+          <!-- Fallback para navegadores que não suportam vídeo -->
+          <div class="hero-fallback"></div>
+        </video>
+        
+        <!-- Overlay escuro sobre o vídeo -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Conteúdo da seção -->
+        <div class="hero-content">
+          <h2>Bem-vindo ao Mundo Taekwondo</h2>
+          <p>Descubra a arte marcial coreana que combina disciplina, técnica e filosofia de vida</p>
+          <button class="cta-button">Começar Jornada</button>
+        </div>
+      </section>
+
+      <!-- Sobre Taekwondo -->
+      <section id="sobre" class="content-section">
         <h2>O que é Taekwondo?</h2>
-        <p>O Taekwondo é uma arte marcial coreana conhecida por seus chutes altos e rápidos, disciplina e filosofia.</p>
+        <div class="content-grid">
+          <div class="content-text">
+            <p>O Taekwondo é uma arte marcial coreana que significa "o caminho dos pés e das mãos". Desenvolvido há mais de 2.000 anos, combina técnicas de combate com filosofia de vida, promovendo disciplina, respeito e autoconfiança.</p>
+            <p>Reconhecido como esporte olímpico desde 2000, o Taekwondo é praticado por milhões de pessoas em todo o mundo, desde crianças até adultos, oferecendo benefícios físicos e mentais únicos.</p>
+          </div>
+          <div class="content-highlights">
+            <h3>Características Principais</h3>
+            <ul>
+              <li>🥋 Chutes altos e rápidos</li>
+              <li>⚡ Movimentos dinâmicos</li>
+              <li>🧘 Filosofia de disciplina</li>
+              <li>🏆 Competições esportivas</li>
+              <li>🛡️ Técnicas de autodefesa</li>
+            </ul>
+          </div>
+        </div>
       </section>
-      <section>
-        <h2>Benefícios</h2>
-        <ul>
-          <li>Disciplina e respeito</li>
-          <li>Melhora do condicionamento físico</li>
-          <li>Autodefesa</li>
-          <li>Confiança e autoestima</li>
-        </ul>
+
+      <!-- Benefícios -->
+      <section class="benefits-section">
+        <h2>Benefícios do Taekwondo</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">💪</div>
+            <h3>Físicos</h3>
+            <ul>
+              <li>Melhora do condicionamento físico</li>
+              <li>Desenvolvimento da flexibilidade</li>
+              <li>Fortalecimento muscular</li>
+              <li>Melhora da coordenação motora</li>
+            </ul>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🧠</div>
+            <h3>Mentais</h3>
+            <ul>
+              <li>Disciplina e autocontrole</li>
+              <li>Concentração e foco</li>
+              <li>Confiança e autoestima</li>
+              <li>Redução do estresse</li>
+            </ul>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Sociais</h3>
+            <ul>
+              <li>Respeito e cortesia</li>
+              <li>Trabalho em equipe</li>
+              <li>Liderança</li>
+              <li>Amizades duradouras</li>
+            </ul>
+          </div>
+        </div>
       </section>
+
+      <!-- Graduações -->
+      <section id="graduacoes" class="content-section">
+        <h2>Sistema de Graduações</h2>
+        <div class="graduacoes-content">
+          <div class="faixas-info">
+            <h3>Faixas Coloridas (Gup)</h3>
+            <div class="faixas-grid">
+              <div class="faixa-item branca">Branca (10º Gup)</div>
+              <div class="faixa-item amarela">Amarela (9º Gup)</div>
+              <div class="faixa-item laranja">Laranja (8º Gup)</div>
+              <div class="faixa-item verde">Verde (7º Gup)</div>
+              <div class="faixa-item azul">Azul (6º Gup)</div>
+              <div class="faixa-item vermelho">Vermelho (5º Gup)</div>
+            </div>
+          </div>
+          <div class="faixas-info">
+            <h3>Faixas Pretas (Dan)</h3>
+            <div class="faixas-grid">
+              <div class="faixa-item preta">1º Dan</div>
+              <div class="faixa-item preta">2º Dan</div>
+              <div class="faixa-item preta">3º Dan</div>
+              <div class="faixa-item preta">4º Dan</div>
+              <div class="faixa-item preta">5º Dan</div>
+              <div class="faixa-item preta">6º Dan</div>
+              <div class="faixa-item preta">7º Dan</div>
+              <div class="faixa-item preta">8º Dan</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Técnicas -->
+      <section id="tecnicas" class="content-section">
+        <h2>Técnicas Fundamentais</h2>
+        <div class="tecnicas-grid">
+          <div class="tecnica-card">
+            <h3>Chutes (Chagi)</h3>
+            <ul>
+              <li>Ap Chagi (Chute frontal)</li>
+              <li>Yeop Chagi (Chute lateral)</li>
+              <li>Dollyo Chagi (Chute circular)</li>
+              <li>Bandae Dollyo Chagi (Chute circular reverso)</li>
+            </ul>
+          </div>
+          <div class="tecnica-card">
+            <h3>Golpes (Jireugi)</h3>
+            <ul>
+              <li>Jab (Golpe direto)</li>
+              <li>Cross (Cruzado)</li>
+              <li>Hook (Gancho)</li>
+              <li>Uppercut (Gancho ascendente)</li>
+            </ul>
+          </div>
+          <div class="tecnica-card">
+            <h3>Defesas (Makgi)</h3>
+            <ul>
+              <li>Arae Makgi (Defesa baixa)</li>
+              <li>Momtong Makgi (Defesa média)</li>
+              <li>Olgul Makgi (Defesa alta)</li>
+              <li>Hecho Makgi (Defesa dupla)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Eventos -->
+      <section id="eventos" class="events-section">
+        <h2>Eventos e Competições</h2>
+        <div class="events-grid">
+          <div class="event-card">
+            <h3>🏆 Jogos Olímpicos</h3>
+            <p>O Taekwondo faz parte do programa olímpico desde Sydney 2000, com competições em categorias de peso para homens e mulheres.</p>
+          </div>
+          <div class="event-card">
+            <h3>🌍 Campeonatos Mundiais</h3>
+            <p>Organizados pela World Taekwondo Federation (WTF), são realizados a cada dois anos em diferentes países.</p>
+          </div>
+          <div class="event-card">
+            <h3>🏅 Copa do Mundo</h3>
+            <p>Competição anual que reúne os melhores atletas do mundo em diferentes categorias e modalidades.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- React irá renderizar aqui se necessário -->
       <div id="root"></div>
     </main>
-    <footer>
-      &copy; 2025 Mundo Taekwondo. Todos os direitos reservados.
+
+    <footer id="contato">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Mundo Taekwondo</h3>
+          <p>Seu portal completo sobre a arte marcial coreana</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links Úteis</h4>
+          <ul>
+            <li><a href="#sobre">Sobre o Taekwondo</a></li>
+            <li><a href="#graduacoes">Graduações</a></li>
+            <li><a href="#tecnicas">Técnicas</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contato</h4>
+          <p>📧 contato@mundotaekwondo.com</p>
+          <p>📱 (24) 98144-4324</p>
+          <p>📍 Três Rios, RJ - Brasil</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mundo Taekwondo. Todos os direitos reservados.</p>
+      </div>
     </footer>
     <script type="module" src="/src/main.jsx"></script>
   </body>
