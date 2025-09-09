@@ -84,6 +84,8 @@ body {
     text-align: center;
     padding-top: 80px;
     overflow: hidden;
+    /* Garante que o vídeo seja carregado */
+    background: linear-gradient(135deg, #0a192f 0%, #1e3c72 50%, #2d4a8a 100%);
 }
 
 .hero-video {
@@ -94,6 +96,11 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -2;
+    min-width: 100%;
+    min-height: 100%;
+    /* Garante que o vídeo cubra toda a área */
+    transform: scale(1.1);
+    /* Pequeno zoom para evitar bordas pretas */
 }
 
 .hero-overlay {

@@ -35,7 +35,7 @@
         <!-- Vídeo de fundo -->
         <video class="hero-video" autoplay muted loop playsinline>
           <!-- Substitua pelo seu próprio vídeo de Taekwondo -->
-          <source src="/videos/taekwondo-hero.mp4" type="video/mp4">
+          <source src="./videos/taekwondo-hero.mp4" type="video/mp4">
           <!-- Fallback para navegadores que não suportam vídeo -->
           <div class="hero-fallback"></div>
         </video>
@@ -224,5 +224,35 @@
       </div>
     </footer>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Script para garantir que o vídeo funcione -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const video = document.querySelector('.hero-video');
+        if (video) {
+          // Força o carregamento do vídeo
+          video.load();
+          
+          // Tenta reproduzir o vídeo
+          video.play().catch(function(error) {
+            console.log('Autoplay foi bloqueado:', error);
+            // Se autoplay falhar, mostra o vídeo pausado
+            video.style.display = 'block';
+          });
+          
+          // Evento quando o vídeo está pronto
+          video.addEventListener('loadeddata', function() {
+            console.log('Vídeo carregado com sucesso!');
+          });
+          
+          // Evento de erro
+          video.addEventListener('error', function() {
+            console.log('Erro ao carregar o vídeo');
+            // Esconde o vídeo se houver erro
+            video.style.display = 'none';
+          });
+        }
+      });
+    </script>
   </body>
 </html>
