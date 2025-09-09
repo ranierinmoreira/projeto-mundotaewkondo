@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-# React + Vite
+<<<<<<< Mundo Taekwondo 🥋 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem vindo ao portal do Mundo Taekwondo 
+aqui falo e apresento algumas das habilidades de desenvolvimento que aprendi no longo do curso de Engenharia de Software aproveitando para isso desenvovi esse portal inspirado na arte marcial que amo praticar. Seja bem vindo 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## O Mundo Taekwondo 🥋 é um projeto no qual falo sobre a arte marcial que prático. Ela existe a mais de 2000 nascida e estudada nas províncias coreanas.
 =======
 # projeto-mundotaewkondo
-_____________________________________________________
->>>>>>> 4e603dfcfba58d1de3904a3e580a14d57efad525
+________________________________________________
