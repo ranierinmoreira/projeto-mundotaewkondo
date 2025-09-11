@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mundo Taekwondo - Portal Oficial da Arte Marcial Coreana</title>
     <meta name="description" content="Portal completo sobre Taekwondo: história, técnicas, graduações, eventos e muito mais. Descubra o mundo da arte marcial coreana." />
-    <link rel="stylesheet" href="body.css" />
-    <link rel="stylesheet" href="src/head.css" />
+    <link rel="stylesheet" href="src/styles/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -35,10 +34,14 @@
         <!-- Vídeo de fundo -->
         <video class="hero-video" autoplay muted loop playsinline>
           <!-- Substitua pelo seu próprio vídeo de Taekwondo -->
-          <source src="./videos/taekwondo-hero.mp4" type="video/mp4">
+          <source src="/videos/taekwondo-hero.mp4" type="video/mp4">
           <!-- Fallback para navegadores que não suportam vídeo -->
-          <div class="hero-fallback"></div>
+          Seu navegador não suporta vídeos HTML5.
         </video>
+        <!-- Fallback visual caso o vídeo não carregue -->
+        <div class="hero-fallback">
+          <img src="/videos/video-placeholder.svg" alt="Taekwondo Background" class="fallback-image" />
+        </div>
         
         <!-- Overlay escuro sobre o vídeo -->
         <div class="hero-overlay"></div>
@@ -57,12 +60,14 @@
         <div class="content-grid">
           <div class="content-text">
             <p>O Taekwondo é uma arte marcial coreana que significa "o caminho dos pés e das mãos". Desenvolvido há mais de 2.000 anos, combina técnicas de combate com filosofia de vida, promovendo disciplina, respeito e autoconfiança.</p>
+            <p>Modernizado é praticado por milhões de pessoas em todo o mundo, desde crianças até adultos, oferecendo benefícios físicos e mentais únicos.</p>
             <p>Reconhecido como esporte olímpico desde 2000, o Taekwondo é praticado por milhões de pessoas em todo o mundo, desde crianças até adultos, oferecendo benefícios físicos e mentais únicos.</p>
           </div>
           <div class="content-highlights">
             <h3>Características Principais</h3>
             <ul>
-              <li>🥋 Chutes altos e rápidos</li>
+              <li>🥋 Chutes altos e poderosos</li>
+              <li>👊 Socos fortes e rápidos</li>
               <li>⚡ Movimentos dinâmicos</li>
               <li>🧘 Filosofia de disciplina</li>
               <li>🏆 Competições esportivas</li>
@@ -201,7 +206,7 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>Mundo Taekwondo</h3>
-          <p>Seu portal completo sobre a arte marcial coreana</p>
+          <p>Seu portal completo sobre a arte marcial coreana, aqui no Brasil</p>
         </div>
         <div class="footer-section">
           <h4>Links Úteis</h4>
@@ -215,12 +220,13 @@
         <div class="footer-section">
           <h4>Contato</h4>
           <p>📧 contato@mundotaekwondo.com</p>
-          <p>📱 (24) 98144-4324</p>
+          <p>📱 (24) 98144-4324 | (21) 99685-1368</p>
           <p>📍 Três Rios, RJ - Brasil</p>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 Mundo Taekwondo. Todos os direitos reservados.</p>
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/ranieri-nascimento/" target="_blank">Ránieri do Nascimento Moreira</a></p>
       </div>
     </footer>
     <script type="module" src="/src/main.jsx"></script>
@@ -229,28 +235,81 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const video = document.querySelector('.hero-video');
+        const fallback = document.querySelector('.hero-fallback');
+        
         if (video) {
+          console.log('🎬 Iniciando carregamento do vídeo...');
+          
           // Força o carregamento do vídeo
           video.load();
           
-          // Tenta reproduzir o vídeo
-          video.play().catch(function(error) {
-            console.log('Autoplay foi bloqueado:', error);
-            // Se autoplay falhar, mostra o vídeo pausado
-            video.style.display = 'block';
-          });
-          
           // Evento quando o vídeo está pronto
           video.addEventListener('loadeddata', function() {
-            console.log('Vídeo carregado com sucesso!');
+            console.log('✅ Vídeo carregado com sucesso!');
+            // Esconde o fallback quando o vídeo carrega
+            if (fallback) {
+              fallback.style.opacity = '0';
+              fallback.style.pointerEvents = 'none';
+            }
+            // Garante que o vídeo seja visível
+            video.style.opacity = '1';
+            video.style.pointerEvents = 'auto';
+          });
+          
+          // Evento quando o vídeo pode começar a reproduzir
+          video.addEventListener('canplay', function() {
+            console.log('🎬 Vídeo pronto para reprodução!');
+            // Tenta reproduzir o vídeo
+            video.play().then(function() {
+              console.log('▶️ Vídeo reproduzindo com sucesso!');
+            }).catch(function(error) {
+              console.log('⚠️ Autoplay bloqueado pelo navegador:', error);
+              // Mesmo com autoplay bloqueado, o vídeo ainda será exibido
+            });
+          });
+          
+          // Evento quando o vídeo começa a reproduzir
+          video.addEventListener('play', function() {
+            console.log('▶️ Vídeo começou a reproduzir!');
           });
           
           // Evento de erro
           video.addEventListener('error', function() {
-            console.log('Erro ao carregar o vídeo');
+            console.log('❌ Erro ao carregar o vídeo - usando fallback');
             // Esconde o vídeo se houver erro
-            video.style.display = 'none';
+            video.style.opacity = '0';
+            video.style.pointerEvents = 'none';
+            
+            // Mostra o fallback
+            if (fallback) {
+              fallback.style.opacity = '1';
+              fallback.style.pointerEvents = 'auto';
+            }
           });
+          
+          // Verifica se o vídeo tem source válido
+          const source = video.querySelector('source');
+          if (source && source.src) {
+            console.log('📁 Source encontrado:', source.src);
+          } else {
+            console.log('❌ Nenhum source válido encontrado');
+          }
+          
+          // Timeout para verificar se o vídeo carregou
+          setTimeout(function() {
+            if (video.readyState === 0) {
+              console.log('⏰ Timeout - vídeo não carregou, usando fallback');
+              video.style.opacity = '0';
+              video.style.pointerEvents = 'none';
+              
+              if (fallback) {
+                fallback.style.opacity = '1';
+                fallback.style.pointerEvents = 'auto';
+              }
+            } else {
+              console.log('✅ Vídeo carregado dentro do timeout');
+            }
+          }, 3000); // 3 segundos de timeout
         }
       });
     </script>

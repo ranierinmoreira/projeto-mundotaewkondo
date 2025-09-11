@@ -1,34 +1,34 @@
 import { useState } from 'react';
-import './App.css';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import InteractiveSection from './components/InteractiveSection';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="react-component">
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <>
+      <div className="react-component">
+        <h3>🥋 Portal Interativo - Mundo Taekwondo</h3>
+        <div className="card">
+          <button onClick={() => setCount((count) => count + 1)}>
+            Cliques de Interesse: {count}
+          </button>
+          <p>
+            Este portal combina HTML tradicional com componentes React modernos para uma experiência completa sobre Taekwondo.
+          </p>
+          <div style={{ marginTop: '1rem', fontSize: '0.9rem', color: '#888' }}>
+            <p>✨ Tecnologias utilizadas:</p>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li>🎨 HTML5 + CSS3 para estrutura e design</li>
+              <li>⚛️ React para interatividade</li>
+              <li>🎬 Vídeo de fundo responsivo</li>
+              <li>📱 Design totalmente responsivo</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <h3>Componente React - Mundo Taekwondo</h3>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Contador: {count}
-        </button>
-        <p>
-          Este é um componente React integrado ao portal HTML
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Portal desenvolvido com HTML, CSS e React
-      </p>
-    </div>
+      
+      <InteractiveSection />
+    </>
   )
 }
 

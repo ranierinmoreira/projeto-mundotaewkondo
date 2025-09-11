@@ -1,0 +1,6 @@
+/* Arquivo principal de estilos - importa todos os outros */
+@import './global.css';
+@import './header.css';
+@import './hero.css';
+@import './sections.css';
+@import './footer.css';

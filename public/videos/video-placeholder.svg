@@ -1,0 +1,65 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a192f;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e3c72;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d4a8a;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  
+  <!-- Animated circles -->
+  <circle cx="300" cy="200" r="100" fill="url(#glow)" opacity="0.6">
+    <animate attributeName="r" values="100;150;100" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.3;0.6" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="1600" cy="300" r="80" fill="url(#glow)" opacity="0.4">
+    <animate attributeName="r" values="80;120;80" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.2;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="800" cy="800" r="120" fill="url(#glow)" opacity="0.5">
+    <animate attributeName="r" values="120;180;120" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Taekwondo symbol -->
+  <g transform="translate(960, 540)">
+    <circle cx="0" cy="0" r="200" fill="none" stroke="#ffd700" stroke-width="3" opacity="0.8">
+      <animate attributeName="stroke-width" values="3;6;3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Yin Yang inspired symbol -->
+    <path d="M-100,0 A100,100 0 0,1 100,0 A50,50 0 0,0 0,0 A50,50 0 0,0 -100,0" fill="#ffd700" opacity="0.7">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="10s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Text -->
+    <text x="0" y="50" text-anchor="middle" fill="#ffd700" font-family="Arial, sans-serif" font-size="48" font-weight="bold" opacity="0.9">
+      🥋 TAEKWONDO
+    </text>
+  </g>
+  
+  <!-- Floating particles -->
+  <circle cx="200" cy="600" r="4" fill="#ffd700" opacity="0.8">
+    <animate attributeName="cy" values="600;400;600" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="1700" cy="700" r="3" fill="#ffd700" opacity="0.6">
+    <animate attributeName="cy" values="700;500;700" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="400" cy="900" r="5" fill="#ffd700" opacity="0.7">
+    <animate attributeName="cy" values="900;700;900" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
