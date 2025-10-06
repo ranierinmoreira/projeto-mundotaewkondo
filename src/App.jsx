@@ -1,5 +1,11 @@
 import { useState } from 'react';
+import AthletesRanking from './components/AthletesRanking';
+import ImageGallery from './components/ImageGallery';
 import InteractiveSection from './components/InteractiveSection';
+import LiveCompetitions from './components/LiveCompetitions';
+import LiveMatches from './components/LiveMatches';
+import VideoAdmin from './components/VideoAdmin';
+import VideoGallery from './components/VideoGallery';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +34,12 @@ function App() {
       </div>
       
       <InteractiveSection />
+      <ImageGallery />
+      <LiveCompetitions />
+      <AthletesRanking />
+      <LiveMatches />
+      <VideoGallery />
+      <VideoAdmin />
     </>
   )
 }
