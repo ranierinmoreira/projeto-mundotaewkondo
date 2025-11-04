@@ -14,7 +14,8 @@
       <nav class="navbar">
         <div class="nav-container">
           <div class="nav-logo">
-            <h1>🥋 Mundo Taekwondo</h1>
+            <div class="logo-icon">🥋</div>
+            <h1>Mundo Taekwondo</h1>
           </div>
           <ul class="nav-menu">
             <li><a href="#home">Início</a></li>
@@ -26,6 +27,12 @@
             <li><a href="#dados-vivos">Dados ao Vivo</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
+          <a href="#contato" class="nav-cta">Participe</a>
+          <button class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
     </header>
@@ -33,26 +40,39 @@
     <main>
       <!-- Hero Section -->
       <section id="home" class="hero">
-        <!-- Vídeo de fundo -->
-        <video class="hero-video" autoplay muted loop playsinline>
-          <!-- Substitua pelo seu próprio vídeo de Taekwondo -->
-          <source src="/videos/taekwondo-hero.mp4" type="video/mp4">
-          <!-- Fallback para navegadores que não suportam vídeo -->
-          Seu navegador não suporta vídeos HTML5.
-        </video>
-        <!-- Fallback visual caso o vídeo não carregue -->
-        <div class="hero-fallback">
-          <img src="/videos/video-placeholder.svg" alt="Taekwondo Background" class="fallback-image" />
+        <!-- Imagem de fundo -->
+        <div class="hero-background-image">
+          <img src="/images/dois-meninos-lutando-no-vetor-de-ilustracao-de-competicao-de-taekwondo_105094-67.avif" alt="Dois meninos lutando em competição de taekwondo" class="hero-bg-img" />
         </div>
         
-        <!-- Overlay escuro sobre o vídeo -->
+        <!-- Overlay -->
         <div class="hero-overlay"></div>
         
         <!-- Conteúdo da seção -->
         <div class="hero-content">
           <h2>Bem-vindo ao Mundo Taekwondo</h2>
-          <p>Descubra a arte marcial coreana que combina disciplina, técnica e filosofia de vida</p>
-          <button class="cta-button">Começar Jornada</button>
+          <p>Descubra a arte marcial coreana que combina disciplina, técnica e filosofia de vida. Uma jornada de autoconhecimento e superação que une tradição e modernidade.</p>
+          <a href="#sobre" class="cta-button">Começar Jornada</a>
+          
+          <!-- Estatísticas -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Países</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100M+</span>
+              <span class="stat-label">Praticantes</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">2000+</span>
+              <span class="stat-label">Anos de História</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24</span>
+              <span class="stat-label">Anos Olímpico</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -226,30 +246,108 @@
       <div class="footer-content">
         <div class="footer-section">
           <h3>Mundo Taekwondo</h3>
-          <p>Seu portal completo sobre a arte marcial coreana, aqui no Brasil</p>
+          <p>Seu portal completo sobre a arte marcial coreana, aqui no Brasil. Descubra a história, técnicas e filosofia do taekwondo.</p>
+          
+          <div class="social-links">
+            <a href="#" class="social-link" title="Facebook">📘</a>
+            <a href="#" class="social-link" title="Instagram">📷</a>
+            <a href="#" class="social-link" title="YouTube">📺</a>
+            <a href="#" class="social-link" title="Twitter">🐦</a>
+          </div>
         </div>
+        
         <div class="footer-section">
           <h4>Links Úteis</h4>
-          <ul>
-            <li><a href="#sobre">Sobre o Taekwondo</a></li>
-            <li><a href="#graduacoes">Graduações</a></li>
-            <li><a href="#tecnicas">Técnicas</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-          </ul>
+          <div class="useful-links">
+            <div>
+              <h4>Navegação</h4>
+              <ul>
+                <li><a href="#sobre">Sobre o Taekwondo</a></li>
+                <li><a href="#graduacoes">Graduações</a></li>
+                <li><a href="#tecnicas">Técnicas</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Recursos</h4>
+              <ul>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#dados-vivos">Dados ao Vivo</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="https://cbtkd.org.br/" target="_blank">CBTKD</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+        
         <div class="footer-section">
           <h4>Contato</h4>
-          <p>📧 contato@mundotaekwondo.com</p>
-          <p>📱 (24) 98144-4324 | (21) 99685-1368</p>
-          <p>📍 Três Rios, RJ - Brasil</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <span>ranieri.n.moreira@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <span>(24) 98144-4324 | (21) 99685-1368</span>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <span>Paraíba do Sul, RJ - Brasil</span>
+            </div>
+          </div>
+          
+          <div class="newsletter">
+            <h4>Newsletter</h4>
+            <p>Receba as últimas notícias do mundo do taekwondo</p>
+            <form class="newsletter-form">
+              <input type="email" class="newsletter-input" placeholder="Seu e-mail">
+              <button type="submit" class="newsletter-button">Inscrever</button>
+            </form>
+          </div>
         </div>
       </div>
+      
       <div class="footer-bottom">
         <p>&copy; 2025 Mundo Taekwondo. Todos os direitos reservados.</p>
         <p>Desenvolvido por <a href="https://www.linkedin.com/in/ranieri-nascimento/" target="_blank">Ránieri do Nascimento Moreira</a></p>
       </div>
     </footer>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Script para menu mobile -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (mobileToggle && navMenu) {
+          mobileToggle.addEventListener('click', function() {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+          });
+          
+          // Fechar menu ao clicar em um link
+          const navLinks = navMenu.querySelectorAll('a');
+          navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              mobileToggle.classList.remove('active');
+              navMenu.classList.remove('active');
+            });
+          });
+        }
+        
+        // Efeito de scroll no header
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        });
+      });
+    </script>
     
     <!-- Script para garantir que o vídeo funcione -->
     <script>

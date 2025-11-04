@@ -5,14 +5,33 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #003d7a;
+    --accent-color: #0088ff;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --text-muted: #6c757d;
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-blue: #0066cc;
+    --bg-dark-blue: #003d7a;
+    --border-color: #dee2e6;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-lg: 0 4px 20px rgba(0,0,0,0.15);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #808da0 0%, #1f1e1e 50%, #8a8a8a 100%);
-    color: #fff;
+    background: var(--bg-white);
+    color: var(--text-dark);
     min-height: 100vh;
     line-height: 1.6;
 }
@@ -26,25 +45,28 @@ section {
 #root {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+    padding: 0;
+    text-align: left;
 }
 
 .react-component {
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
+    background: var(--bg-white);
+    border-radius: 8px;
     padding: 2rem;
     margin: 2rem 0;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
 }
 
 .react-component h3 {
-    color: #ffd700;
+    color: var(--primary-color);
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .react-component p {
-    color: #e0e0e0;
+    color: var(--text-dark);
     line-height: 1.6;
 }
 

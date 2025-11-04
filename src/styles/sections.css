@@ -1,17 +1,18 @@
-/* Main Content */
+/* Main Content - Estilo CBTKD */
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    background: var(--bg-light);
 }
 
 .content-section {
     margin-bottom: 4rem;
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
+    background: var(--bg-white);
+    border-radius: 12px;
     padding: 3rem;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.8s ease forwards;
@@ -30,11 +31,25 @@ main {
 }
 
 .content-section h2 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
     font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
 }
 
 .content-grid {
@@ -47,11 +62,12 @@ main {
 .content-text p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #e0e0e0;
+    color: var(--text-dark);
+    line-height: 1.8;
 }
 
 .content-highlights h3 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -61,9 +77,17 @@ main {
 }
 
 .content-highlights li {
-    padding: 0.5rem 0;
+    padding: 0.8rem 0;
     font-size: 1.1rem;
-    color: #e0e0e0;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.content-highlights li:last-child {
+    border-bottom: none;
 }
 
 /* Benefits Section */
@@ -72,7 +96,7 @@ main {
 }
 
 .benefits-section h2 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -86,12 +110,13 @@ main {
 }
 
 .benefit-card {
-    background: rgba(255,255,255,0.08);
-    border-radius: 15px;
+    background: var(--bg-white);
+    border-radius: 12px;
     padding: 2rem;
     text-align: center;
-    transition: transform 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
     position: relative;
     overflow: hidden;
 }
@@ -100,30 +125,28 @@ main {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-    transition: left 0.5s;
-}
-
-.benefit-card:hover::before {
-    left: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
 .benefit-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .benefit-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
+    display: block;
 }
 
 .benefit-card h3 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .benefit-card ul {
@@ -132,8 +155,18 @@ main {
 }
 
 .benefit-card li {
-    padding: 0.3rem 0;
-    color: #e0e0e0;
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.benefit-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
 }
 
 /* Graduações */
@@ -144,7 +177,7 @@ main {
 }
 
 .faixas-info h3 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     text-align: center;
@@ -158,31 +191,18 @@ main {
 
 .faixa-item {
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 8px;
     text-align: center;
     font-weight: 600;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-}
-
-.faixa-item::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-}
-
-.faixa-item:hover::after {
-    left: 100%;
+    border: 2px solid transparent;
 }
 
 .faixa-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    border-color: var(--primary-color);
 }
 
 .faixa-item.branca { background: linear-gradient(45deg, #f8f8f8, #e0e0e0); color: #333; }
@@ -201,33 +221,36 @@ main {
 }
 
 .tecnica-card {
-    background: rgba(255,255,255,0.08);
-    border-radius: 15px;
+    background: var(--bg-white);
+    border-radius: 12px;
     padding: 2rem;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
     position: relative;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .tecnica-card::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-    transition: left 0.5s;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
-.tecnica-card:hover::before {
-    left: 100%;
+.tecnica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .tecnica-card h3 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .tecnica-card ul {
@@ -235,9 +258,17 @@ main {
 }
 
 .tecnica-card li {
-    padding: 0.5rem 0;
-    color: #e0e0e0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 0.8rem 0;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.tecnica-card li::before {
+    content: '🥋';
+    position: absolute;
+    left: 0;
 }
 
 .tecnica-card li:last-child {
@@ -250,7 +281,7 @@ main {
 }
 
 .events-section h2 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 2.5rem;
     margin-bottom: 3rem;
     text-align: center;
@@ -264,11 +295,12 @@ main {
 }
 
 .event-card {
-    background: rgba(255,255,255,0.08);
-    border-radius: 15px;
+    background: var(--bg-white);
+    border-radius: 12px;
     padding: 2rem;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
     position: relative;
     overflow: hidden;
 }
@@ -277,39 +309,37 @@ main {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-    transition: left 0.5s;
-}
-
-.event-card:hover::before {
-    left: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
 }
 
 .event-card:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .event-card h3 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .event-card p {
-    color: #e0e0e0;
+    color: var(--text-dark);
     line-height: 1.6;
 }
 
 /* Componente Interativo */
 .interactive-section {
-    background: rgba(255,255,255,0.05);
-    border-radius: 20px;
+    background: var(--bg-white);
+    border-radius: 12px;
     padding: 2rem;
     margin: 2rem 0;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
 }
 
 .tabs-container {
@@ -321,29 +351,32 @@ main {
 }
 
 .tab-button {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #e0e0e0;
+    background: var(--bg-light);
+    border: 2px solid var(--border-color);
+    color: var(--text-dark);
     padding: 1rem 1.5rem;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .tab-button:hover {
-    background: rgba(255,215,0,0.2);
-    border-color: #ffd700;
-    color: #ffd700;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-white);
+    transform: translateY(-2px);
 }
 
 .tab-button.active {
-    background: rgba(255,215,0,0.3);
-    border-color: #ffd700;
-    color: #ffd700;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-white);
+    box-shadow: var(--shadow);
 }
 
 .tab-icon {
@@ -351,10 +384,11 @@ main {
 }
 
 .tab-content h3 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
+    font-weight: 600;
 }
 
 .content-grid {
@@ -364,89 +398,99 @@ main {
 }
 
 .content-item {
-    background: rgba(255,255,255,0.08);
-    border-radius: 15px;
+    background: var(--bg-white);
+    border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
 }
 
 .content-item:hover {
     transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
 }
 
 .item-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    display: block;
 }
 
 .content-item h4 {
-    color: #ffd700;
+    color: var(--primary-color);
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .content-item p {
-    color: #e0e0e0;
+    color: var(--text-dark);
     font-size: 0.9rem;
     line-height: 1.5;
 }
 
 /* Gallery Section */
 .gallery-section {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 
 .gallery-intro {
-  text-align: center;
-  margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .gallery-intro h2 {
-  color: #ffd700;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .gallery-intro p {
-  color: #e0e0e0;
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Live Data Section */
 .live-data-section {
-  margin-bottom: 4rem;
+    margin-bottom: 4rem;
 }
 
 .live-data-intro {
-  text-align: center;
-  margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .live-data-intro h2 {
-  color: #ffd700;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .live-data-intro p {
-  color: #e0e0e0;
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
+    main {
+        padding: 2rem 1rem;
+    }
+    
+    .content-section {
+        padding: 2rem;
+    }
+    
     .content-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -455,14 +499,6 @@ main {
     .graduacoes-content {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-    
-    main {
-        padding: 2rem 1rem;
-    }
-    
-    .content-section {
-        padding: 2rem;
     }
     
     .tabs-container {
@@ -476,19 +512,31 @@ main {
         justify-content: center;
     }
     
-    .gallery-intro h2 {
-        font-size: 2rem;
-    }
-    
-    .gallery-intro p {
-        font-size: 1rem;
-    }
-    
+    .gallery-intro h2,
     .live-data-intro h2 {
         font-size: 2rem;
     }
     
+    .gallery-intro p,
     .live-data-intro p {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section h2 {
+        font-size: 2rem;
+    }
+    
+    .benefits-grid,
+    .tecnicas-grid,
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-card,
+    .tecnica-card,
+    .event-card {
+        padding: 1.5rem;
     }
 }

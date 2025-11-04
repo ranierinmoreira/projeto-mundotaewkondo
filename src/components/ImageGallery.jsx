@@ -78,6 +78,15 @@ const ImageGallery = () => {
       description: 'Técnica avançada que combina rotação e chute circular para máxima eficiência.',
       category: 'tecnicas',
       tags: ['chute', 'circular', 'avançado']
+    },
+    {
+      id: 9,
+      src: '/images/dois-meninos-lutando-no-vetor-de-ilustracao-de-competicao-de-taekwondo_105094-67.avif',
+      alt: 'Dois meninos lutando em competição de taekwondo',
+      title: 'Competição de Taekwondo',
+      description: 'Ilustração vetorial mostrando dois jovens praticantes em uma competição de taekwondo, demonstrando técnica e disciplina.',
+      category: 'competicoes',
+      tags: ['competição', 'jovens', 'luta', 'técnica']
     }
   ];
 

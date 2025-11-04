@@ -1,11 +1,11 @@
-/* Live Competitions Styles */
+/* Live Competitions Styles - Estilo CBTKD */
 .live-competitions {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  background: var(--bg-white);
+  border-radius: 12px;
   padding: 3rem;
   margin: 2rem 0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow);
   position: relative;
 }
 
@@ -15,15 +15,14 @@
 }
 
 .competitions-header h2 {
-  color: #ffd700;
+  color: var(--primary-color);
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
 }
 
 .competitions-header p {
-  color: #e0e0e0;
+  color: var(--text-dark);
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
